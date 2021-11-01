@@ -14,6 +14,7 @@ from timm.utils.log import setup_default_logging
 
 _logger = logging.getLogger('train')
 
+# test
 
 def train_fn(model, train_data_loader, optimizer, epoch):
     model.train()
@@ -92,10 +93,7 @@ def train(args=None, wandb_run=None):
         )
         avg_loss_eval = eval_fn(model, eval_dataloader, epoch)
         saver.save_checkpoint(epoch, metric=avg_loss_eval)
-        print(
-            f"EPOCH = {epoch} | TRAIN_LOSS = {avg_loss_train} | EVAL_LOSS = {avg_loss_eval}"
-        )
-
+        
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

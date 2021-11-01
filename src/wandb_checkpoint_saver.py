@@ -132,7 +132,7 @@ class CheckpointSaver:
 
     def delete_artifact(self, filename, alias='v0'):
         api = wandb.Api()
-        artifact = api.artifact(f'{self.args.experiment}/{filename}:{alias}')
+        artifact = api.artifact(f'{self.args.project}/{filename}:{alias}')
         try: 
             artifact.delete(delete_aliases=True)
         except Exception as e:
