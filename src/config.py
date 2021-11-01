@@ -6,8 +6,8 @@ IMG_SIZE = 160
 
 Config = dict(
     DATA_DIR="../data/imagenette2-160",
-    TRAIN_DATA_DIR="../data/imagenette2-160/train",
-    TEST_DATA_DIR="../data/imagenette2-160/val",
+    TRAIN_DATA_DIR="./data/imagenette2-160/train",
+    TEST_DATA_DIR="./data/imagenette2-160/val",
     DEVICE="cuda",
     MODEL="efficientnet_b3",
     PRETRAINED=False,

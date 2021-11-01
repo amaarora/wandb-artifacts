@@ -1,10 +1,7 @@
-# Distributed Training in PyTorch on ImageNette
+# Checkpoint Saver example with W&B
 
-This repository contains working code to train on ImageNette using [DISTRIBUTED DATA PARALLEL (DDP)](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html) in PyTorch and [Hugging Face Accelerate](https://github.com/huggingface/accelerate).
+This repository contains working code to train on ImageNette using in PyTorch.
 
-🤗 Accelerate - [DOCS](https://github.com/huggingface/accelerate) | [GitHub](https://github.com/huggingface/accelerate)
-
-For a deep-dive into the HF Accelerate package, refer to [Inside Hugging Face's Accelerate!](https://wandb.ai/wandb_fc/pytorch-image-models/reports/Inside-Hugging-Face-s-Accelerate---Vmlldzo2MzgzNzA). 
 
 To be able to run the scripts, please run the following commands first from the root directory of this repository to download the data: 
 
@@ -43,16 +40,9 @@ data/
         └── n03888257
 ```
 
-## Launch training using PyTorch DDP 
-To launch training using PyTorch DDP, run the following command from the `src` folder of this repository: 
+## Launch training using PyTorch 
+To launch training using PyTorch, run the following command from the root folder of this repository: 
 
 ```
-./ddp.sh <number-of-gpus>
-```
-
-## Launch training using Huggingface Accelerate 
-To launch training using Huggingface Accelerate, run the following command from the `src` folder of this repository: 
-
-```
-accelerate launch train_accelerate.py
+python src/train.py 
 ```
